@@ -37,14 +37,4 @@ The user interface will feature:
 - **Home Dashboard** – Displays user’s greenhouse overview with adopted plants.  
 - **Plant Catalog** – Allows users to browse and select plants to adopt.  
 - **Plant Detail Page** – Shows detailed care instructions and current “virtual health.”  
-- **Care Log / Notifications Panel** – Displays reminders for watering, sunlight checks, etc.  
-- **Profile / Achievements Page** – Shows user stats, badges, and overall progress.  
-
-The UI will emphasize ease of use, visual appeal, and responsive design for accessibility across devices.
-
----
-
-## 6. Repository Guidelines
-- Repository is **private** and shared only with the professor and team members.  
-- All project files are committed to the **`main`** branch.  
-- A **`.gitignore`** file excludes unnecessary files (e.g., `.DS_Store`, compiled files, environment configs).  
+- **Care Log / Notifications Panel** – Displays reminders for watering, sunlight checks, etc.    
