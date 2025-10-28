@@ -18,6 +18,11 @@ The **Virtual Plant Adoption Platform** is a cloud-native web application that a
 3. **Greenhouse Module** – Handles users interactions with the game, including adopting plants, caring for plants, and viewing stats and information about them.
 4. **Notification Module** – Sends reminders and updates as notifications, personalizable for the user.
 
+## MICROSERVICES
+1. **user_service** - Python Flask (and currently SQLite) **ROUGH DRAFT DONE**
+2. **plant_catalog_service** - Java SpringBoot **NEED TO DO**
+3. **Greenhouse_Service** - idek **NEED TO DO**
+
 ---
 
 ## 4. Estimated Languages and Frameworks
