@@ -37,6 +37,53 @@ app.post("/adopt", (req, res) => {
     });
 });
 
+// PUT /adopt/:id - update a plant's nickname
+app.put("/adopt/:id", (req, res) => {
+    const { id } = req.params;
+    const { nickname } = req.body;
+
+    if (!nickname) {
+        return res.status(400).json({ error: "Missing nickname" });
+    }
+
+    const query = `
+    UPDATE adopted_plants
+    SET nickname = ?
+    WHERE id = ?
+  `;
+    db.run(query, [nickname, id], function (err) {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: "Database error" });
+        }
+        if (this.changes === 0) {
+            return res.status(404).json({ error: "Adopted plant not found" });
+        }
+        res.json({ message: "Nickname updated successfully", id, nickname });
+    });
+});
+
+// DELETE /adopt/:id - remove an adopted plant
+app.delete("/adopt/:id", (req, res) => {
+    const { id } = req.params;
+
+    const query = `
+    DELETE FROM adopted_plants
+    WHERE id = ?
+  `;
+    db.run(query, [id], function (err) {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: "Database error" });
+        }
+        if (this.changes === 0) {
+            return res.status(404).json({ error: "Adopted plant not found" });
+        }
+        res.json({ message: `Adopted plant with ID ${id} deleted.` });
+    });
+});
+
+
 // GET /greenhouse/:user_id - list all plants adopted by a user
 app.get("/greenhouse/:user_id", (req, res) => {
     const { user_id } = req.params;
@@ -53,6 +100,7 @@ app.get("/greenhouse/:user_id", (req, res) => {
         res.json(rows);
     });
 });
+
 
 
 app.listen(PORT, () => {
