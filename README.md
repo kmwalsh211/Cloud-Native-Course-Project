@@ -20,7 +20,7 @@ The **Virtual Plant Adoption Platform** is a cloud-native web application that a
 
 ## MICROSERVICES
 1. **user_service** - Python Flask (and currently SQLite) **ROUGH DRAFT DONE**
-2. **plant_catalog_service** - Java SpringBoot **NEED TO DO**
+2. **plant_catalog_service** - Java SpringBoot (and currently H2 database) **ROUGH DRAFT DONE**
 3. **Greenhouse_Service** - idek **NEED TO DO**
 
 ---
