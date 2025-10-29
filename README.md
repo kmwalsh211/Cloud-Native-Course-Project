@@ -23,13 +23,17 @@ The platform aims to combine education and gameplay, encouraging users to learn 
 ## Services
 This project implements a multi-service cloud-native architecture consisting of three backend microservices and a React frontend.
 
-**User Service**                Python Flask            Port 5000       Handles user registration and profiles
-**Plant Catalog Service**       Java Spring Boot        Port 8080       Provides plant species and care info
-**Greenhouse Service**          Node.js Express         Port 5002       Manages users’ adopted plants
-**Frontend**                    React (JavaScript)      Port 3000       User interface connecting all services
+| Service | Tech    | Post    | Purpose                                |
+|---------|---------|---------|----------------------------------------|
+|**User Service** | Python Flask | Port 5000 | Handles user registration and profiles |
+|**Plant Catalog Service** | Java Spring Boot | Port 8080 | Provides plant species and care info   | 
+|**Greenhouse Service** | Node.js Express | Port 5002 | Manages users’ adopted plants |
+|**Frontend** | React (JavaScript) | Port 3000 | User interface connecting all services |
 
 Each microservice exposes its own RESTful API with full CRUD functionality and connects via HTTP requests from the React frontend.
+
 ^^this is not true yet.
+
 ---
 
 ## Technical Stack
