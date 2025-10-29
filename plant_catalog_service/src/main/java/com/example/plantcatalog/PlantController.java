@@ -1,11 +1,13 @@
 package com.example.plantcatalog;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 //controller turns the microservice into a REST API.
 //Each method corresponds to an HTTP endpoint
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/plants")
 public class PlantController {

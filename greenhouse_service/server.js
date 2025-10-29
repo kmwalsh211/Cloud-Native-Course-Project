@@ -1,8 +1,11 @@
 const express = require("express");
 const db = require("./database"); // connect to your SQLite database
+const cors = require("cors");
+
 const app = express();
 const PORT = 5002;
 
+app.use(cors());
 app.use(express.json());
 
 // Test route
